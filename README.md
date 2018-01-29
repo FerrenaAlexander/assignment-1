@@ -15,6 +15,8 @@ wget http://eaton-lab.org/pdsb/iris-data-dirty.csv
 
 I used both less and zless on both files. The test.fastq.gz is currently gzipped and therefore unintelligible. The iris-data-dirty file appears to be a comma-separated data matrix, containing numbers in the 4 columns and the species name in the 5th; there are several NAs in the number columns and several misspellings in the species column.
 
+## Section 2: clean data.
+
 I scanned the list by eye and noticed two spelling errors, the first mispelled "setosa" to "setsa" and the second using the British spelling of "colour" rather than keeping with the matrix' pattern of spelling "versicolor". I used the following lines of code to determine the line of each:
 
 ```
