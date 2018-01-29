@@ -1,9 +1,9 @@
 # assignment-1
-###Alexander Ferrena
-###apf2139
+### Alexander Ferrena
+### apf2139
 
 
-##Section 1: get data.
+## Section 1: get data.
 
 I had a problem with the Git Bash program (no permissions?) so I used MobaXTerm.
 I could neither use nor install curl, so I just used wget:
