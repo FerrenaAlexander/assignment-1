@@ -47,3 +47,10 @@ cut -b 22-26 iris-data-clean.csv | uniq -c
 
 The Iris versicolor data originally contained two rows with NAs which were removed, leaving just 48 rows. The other two species, Iris setosa and Iris virginica, both had 50 rows of data.
 
+## section 3 : count TGCAG~GAG
+
+to do this, I used the following code, the output is also included
+```
+cut -b 1-5,72-74 test.fastq | grep TGCAGGAG | uniq -c
+     44 TGCAGGAG
+```
