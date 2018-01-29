@@ -3,7 +3,7 @@
 #### apf2139
 
 
-## Section 1: get data.
+## Section 1: (w)get data.
 
 I had a problem with the Git Bash program (no permissions?) so I used MobaXTerm.
 I could neither use nor install curl, so I just used wget:
@@ -55,7 +55,7 @@ cut -b 1-5,72-74 test.fastq | grep TGCAGGAG | uniq -c
      44 TGCAGGAG
 ```
 
-## section 4: summarize seq data.
+## section 4: summarize and sort.
 
 first, I tried creating an index variable in a similar way to the one used in the lecture slides:
 ```
