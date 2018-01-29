@@ -29,11 +29,21 @@ sed 's/setsa/setosa/g' 1iris-data-dirty.csv > 1iris-data-dirty.csv
 sed -i 's/versicolour/versicolor/g' 1iris-data-dirty.csv
 ```
 
-Finally, i used:
+Then, I used the following in order to remove the NAs and save the output as "clean" data.
 
 ```
 sed '/NA/d' 1iris-data-dirty.csv > iris-data-clean.csv
 ```
 
-in order to get remove the NAs and save it as "clean" data.
+Finally, I used the following to count the number of rows associated with each species.
+```
+cut -b 22-26 iris-data-clean.csv | uniq -c
+```
+
+The output I received was:
+     50 setos
+     48 versi
+     50 virgi
+
+The Iris versicolor data originally contained two rows with NAs which were removed, leaving just 48 rows. The other two species, Iris setosa and Iris virginica, both had 50 rows of data.
 
