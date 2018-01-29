@@ -13,7 +13,7 @@ wget http://eaton-lab.org/pdsb/test.fastq.gz
 wget http://eaton-lab.org/pdsb/iris-data-dirty.csv
 ```
 
-I used both less and zless on both files. The test.fastq.gz is currently gzipped and therefore unintelligible. The iris-data-dirty file appears to be a comma-separated data matrix, containing numbers in the 4 columns and the species name in the 5th; there are several NAs in the number columns and several misspellings in the species column.
+I used zless and less on each file respectively. The test.fastq.gz contains sequencing reads with four lines of information per read, including metadata, the actual sequence bases, and read quality for each base. The iris-data-dirty file appears to be a comma-separated data matrix, containing numbers in the 4 columns and the species name in the 5th; there are several NAs in the number columns and several misspellings in the species column.
 
 ## Section 2: clean data.
 
@@ -99,4 +99,3 @@ TGCAGCAGCCTTGCTCGTACAGCTCAGATGCATTTCCACGTTACTCTTACGATTCGACTTACTCTGGAAATGTT
 @41478_cyathophylloides.1 GRC13_0027_FC:4:1:3031:1187 length=74
 ```
 As we can see, read rex.209 appears to be missing its "read quality" line, so by using grep -A1 to grab the next line simply takes the first line from the first read for the taxon cyathophylloides. I am not sure how to fix this problem.
-
