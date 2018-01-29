@@ -78,7 +78,7 @@ echo $index
 superba thamno cyathophylla przewalskii thamno przewalskii rex cyathophylloides
 ```
 
-I then ran the followin for loop, changing the number of lines grabbed by grep from -A3 to -A1 to reflect the fact that the taxon name is printed twice in each read.
+I then ran the following for loop, changing the number of lines grabbed by grep from -A3 to -A1 to reflect the fact that the taxon name is printed twice in each read.
 ```
 for i in $index; do grep -A1 $i test.fastq > sorted_reads/$i.txt; done
 ```
